@@ -1,0 +1,98 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.photo-name {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.typing-skill{
+  width: 100%;
+  color: white;
+}
+
+.typed-cursor{
+  color: #ee4747;
+}
+
+.btn {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn button {
+  width: 280px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  font-size: 30px;
+  color: white;
+  background-color: #ee4747;
+  animation: btn-attention 1.5s ease-in-out infinite both;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.btn button:hover {
+  cursor: pointer;
+  animation: text-pop-up-top 2s ease-out infinite both;
+}
+
+@keyframes btn-attention {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes text-pop-up-top {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.slideUp {
+ animation: slideUp 2s ease-out 1 both;
+}
