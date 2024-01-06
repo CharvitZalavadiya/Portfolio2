@@ -96,3 +96,108 @@
 .slideUp {
  animation: slideUp 2s ease-out 1 both;
 }
+
+@media screen and (min-width: 751px) and (max-width: 1050px) {
+  .photo{
+    width: 250px;
+    height: 250px;
+  }
+
+  .photo-name{
+    padding-top: 20px;
+    font-size: 35px;
+    height: 60vh;
+    margin-bottom: 30px;
+  }
+
+  .photo-name img{
+    margin-bottom: 30px;
+  }
+
+  .typing-skill{
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 751px) {
+  .photo{
+    width: 200px;
+    height: 200px;
+  }
+
+  .photo-name{
+    padding-top: 20px;
+    font-size: 30px;
+    height: 60vh;
+    margin-bottom: 30px;
+  }
+
+  .photo-name img{
+    margin-bottom: 30px;
+  }
+
+  .typing-skill{
+    font-size: 30px;
+  }
+
+  .btn button{
+    font-size: 20px;
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 451px) {
+  .photo{
+    width: 200px;
+    height: 200px;
+  }
+
+  .photo-name{
+    padding-top: 20px;
+    font-size: 25px;
+    height: 60vh;
+    margin-bottom: 0px;
+  }
+
+  .photo-name img{
+    margin-bottom: 30px;
+  }
+
+  .typing-skill{
+    font-size: 25px;
+  }
+
+  .btn button{
+    font-size: 17px;
+    width: 40vw;
+    margin-top: 15vh;
+  }
+}
+
+@media screen and (min-width: 150px) and (max-width: 351px) {
+  .photo{
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo-name{
+    padding-top: 20px;
+    font-size: 20px;
+    height: 60vh;
+    margin-bottom: 30px;
+  }
+
+  .photo-name img{
+    margin-bottom: 20px;
+  }
+
+  .typing-skill{
+    font-size: 20px;
+  }
+
+  .btn button{
+    font-size: 15px;
+    width: 50vw;
+    height: 50px;
+  }
+}

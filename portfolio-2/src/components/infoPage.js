@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./infoPage.css";
 import photo from "./photo.jpg";
-import charvitResume from "./resume.pdf"
+import charvitResume from "./resume.pdf";
 
 // navbar images
 import aboutMeIcon from "./about-me.png";
@@ -15,16 +15,21 @@ import communicationIcon from "./communication.png";
 import leadershipIcon from "./leadership.png";
 import collaborationIcon from "./collaboration.png";
 import uiuxIcon from "./ui-ux.png";
-import frontendIcon from "./frontend.png";
+import fullstackIcon from "./fullstack.png";
 
 import gitIcon from "./git.png";
 import gitHubIcon from "./github.png";
 import vsCodeIcon from "./vs-code.png";
+import postmanapiIcon from "./postman-api.png";
 
 import htmlIcon from "./html.png";
 import cssIcon from "./css.png";
 import jsIcon from "./javascript.png";
 import reactIcon from "./react.png";
+import nodeIcon from "./node-js.png";
+import expressIcon from "./express-js.png";
+import mongoIcon from "./mongo.png";
+import tailwindIcon from "./tailwind-css.png";
 
 // contact me
 import phoneIcon from "./call.png";
@@ -35,16 +40,14 @@ import facebookIcon from "./facebook.png";
 import instagramIcon from "./instagram.png";
 
 function InfoPage() {
-
-
   const resume = () => {
     const link = document.createElement("a");
-    link.href = charvitResume // Assuming the file is in the public folder
+    link.href = charvitResume; // Assuming the file is in the public folder
     link.target = "_blank";
     link.style.display = "none";
-    
+
     document.body.appendChild(link);
-    
+
     link.click();
 
     document.body.removeChild(link);
@@ -374,10 +377,8 @@ function InfoPage() {
     }
   };
 
-
   return (
     <div className={`infoPage`}>
-      
       <div className={`navbar`}>
         <div className="profile-photo">
           <img src={photo} className="photo" alt=" " />
@@ -385,19 +386,24 @@ function InfoPage() {
         </div>
         <ul>
           <li id="about-me">
-            <img src={aboutMeIcon} alt=" "></img> About Me
+            <img src={aboutMeIcon} alt=" "></img>
+            <span> About Me </span>
           </li>
           <li id="education">
-            <img src={educationIcon} alt=" "></img> Education
+            <img src={educationIcon} alt=" "></img>
+            <span> Education </span>
           </li>
           <li id="skills">
-            <img src={skillIcon} alt=" "></img> Skills
+            <img src={skillIcon} alt=" "></img>
+            <span> Skills </span>
           </li>
           <li id="projects">
-            <img src={projectIcon} alt=" "></img> Projects
+            <img src={projectIcon} alt=" "></img>
+            <span> Projects </span>
           </li>
           <li id="contact-me">
-            <img src={contactIcon} alt=" "></img> Contact
+            <img src={contactIcon} alt=" "></img>
+            <span> Contact </span>
           </li>
         </ul>
       </div>
@@ -431,23 +437,24 @@ function InfoPage() {
             ref={aboutmeContentRef}
             id="aboutme-content"
           >
-            <p>Hello friend !</p>
-            <p>I'm Charvit Zalavadiya.</p>
+            <p>Hello user ! I'm Charvit Zalavadiya.</p>
             <p>
-              I am a Frontend Developer and looking towards to be an successfull
-              MERN Stack Developer. Currently I'm a <b>React developer</b>. I am
-              always looking for ways to push boundaries and bring innovative
-              ideas to life.
+            Currently I am a 2<sup>nd</sup> year student of <b>B.Tech</b> in ICT (Information and Communication Technology) specialization at Pandit Deendayal Energy University, Gandhinagar.
             </p>
             <p>
-              I also have passion in Wed Designing field and for that I started
-              learn about <b>Figma</b> and <b>Webflow</b> etc.
+            I am a Full Stack Web Developer with a passion for creating innovative and interactive web applications. For the Frontend development I uses <b>React JS</b>, <b>HTML</b>, <b>CSS</b>. For Backend development I uses <b>Node JS</b> and <b>ExpressJS</b>. To maintain databases I use <b>MongoDB</b> and still learning other database systems like MySQL, Firebase etc.
             </p>
             <p>
-              Communication Languages : <b>Hindi</b> | <b>English</b>
+              I also have passion in Wed Designing field and for that I'm exploring <b>Figma</b> and <b>Webflow</b> etc.
             </p>
             <p>
-              <button onClick={resume}><span>RESUME</span><span>Take a Look</span></button>
+              Communication Languages : <b>Gujarati</b> | <b>Hindi</b> | <b>English</b>
+            </p>
+            <p>
+              <button onClick={resume}>
+                <span>RESUME</span>
+                <span>Take a Look</span>
+              </button>
             </p>
           </div>
         </div>
@@ -489,7 +496,7 @@ function InfoPage() {
                   ref={educationUlliHeading1Ref}
                   id="educationUlliHeading1"
                 >
-                  Degree
+                  B.Tech
                 </p>
                 <p
                   className={`li-description ${
@@ -672,6 +679,14 @@ function InfoPage() {
                   id="softskills-content"
                 >
                   <div>
+                    <span>Fullstack</span>
+                    <img src={fullstackIcon} alt=" "></img>
+                  </div>
+                  <div>
+                    <span>UI/UX</span>
+                    <img src={uiuxIcon} alt=" "></img>
+                  </div>
+                  <div>
                     <span>Communication</span>
                     <img src={communicationIcon} alt=" "></img>
                   </div>
@@ -682,14 +697,6 @@ function InfoPage() {
                   <div>
                     <span>Collaboration</span>
                     <img src={collaborationIcon} alt=" "></img>
-                  </div>
-                  <div>
-                    <span>UI/UX</span>
-                    <img src={uiuxIcon} alt=" "></img>
-                  </div>
-                  <div>
-                    <span>Frontend</span>
-                    <img src={frontendIcon} alt=" "></img>
                   </div>
                 </div>
               </div>
@@ -727,6 +734,10 @@ function InfoPage() {
                     <img src={vsCodeIcon} alt=" "></img>
                     <span>VS Code</span>
                   </div>
+                  <div>
+                    <img src={postmanapiIcon} alt=" "></img>
+                    <span>Postman API</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -754,6 +765,14 @@ function InfoPage() {
                   id="languages-content"
                 >
                   <div>
+                    <span>Node JS</span>
+                    <img src={nodeIcon} alt=" "></img>
+                  </div>
+                  <div>
+                    <span>MongoDB</span>
+                    <img src={mongoIcon} alt=" "></img>
+                  </div>
+                  <div>
                     <span>HTML</span>
                     <img src={htmlIcon} alt=" "></img>
                   </div>
@@ -772,12 +791,20 @@ function InfoPage() {
                   id="languages-content"
                 >
                   <div>
+                    <img src={reactIcon} alt=" "></img>
+                    <span>React JS</span>
+                  </div>
+                  <div>
+                    <img src={expressIcon} alt=" "></img>
+                    <span>Express JS</span>
+                  </div>
+                  <div>
                     <img src={jsIcon} alt=" "></img>
                     <span>JavaScript</span>
                   </div>
                   <div>
-                    <img src={reactIcon} alt=" "></img>
-                    <span>React JS</span>
+                    <img src={tailwindIcon} alt=" "></img>
+                    <span>Tailwind CSS</span>
                   </div>
                 </div>
               </div>
@@ -830,8 +857,9 @@ function InfoPage() {
               >
                 <span className="website-description-heading">Orbital</span>
                 <span className="website-description-description">
-                  Orbital is a website that helps people to find the best
-                  restaurants in the city.
+                  It is a website that provides information about NASA's
+                  marvellous space mission and I created this website in NASA's
+                  Global Space Apps Challenge. In this project i have used HTML and CSS as hackathon was 48 hours and I have to present my website.
                 </span>
               </span>
             </div>
@@ -858,7 +886,9 @@ function InfoPage() {
                   YouTube Clone
                 </span>
                 <span className="website-description-description">
-                  YouTube Clone
+                  This is my very first project.
+                  I have developed this website to enhance my Frontend using
+                  HTML, Tailwind CSS and Vanilla CSS. This is fully responsive website.
                 </span>
               </span>
             </div>

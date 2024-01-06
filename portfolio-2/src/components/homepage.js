@@ -22,7 +22,7 @@ function Homepage() {
       </div>
       <div className="typing-skill">
         <Typed
-          strings={["Web Developer", "UI-UX Designer"]}
+          strings={["Fullstack Developer", "UI-UX Designer"]}
           typeSpeed={50}
           backSpeed={50}
           loop

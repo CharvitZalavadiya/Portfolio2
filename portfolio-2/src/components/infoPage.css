@@ -922,7 +922,7 @@
 }
 
 .contact-me .content ul .contact-line {
-  margin-right: 20px;
+  margin-right: 60px;
   display: flex;
   flex-direction: column;
 }
@@ -1202,10 +1202,45 @@
 
 /* responsive */
 
-@media screen and (min-width: 870px) and (max-width: 1000px) {
+@media screen and (min-width: 1150px) and (max-width: 1300px) {
+  .contact-me .content ul .contact-line{
+    margin-right: 4.5vw;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1150px) {
+  .contact-me .content ul .contact-line{
+    margin-right: 3vw;
+  }
+}
+
+@media screen and (min-width: 871px) and (max-width: 1000px) {
   .contact-me .content .single-line-for-call-email {
     font-size: 17px;
   }
+
+  .contact-me .content ul li{
+    width: 90px;
+  }
+
+  .contact-me .content ul .contact-line span img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .contact-me .content ul li .icon-box a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .contact-me .content ul li .icon-box{
+    height: 40px;
+  }
+
+  .contact-me .content ul{
+    width: 100%;
+  }
+
 }
 
 @media screen and (min-width: 815px) and (max-width: 870px) {
@@ -1260,6 +1295,28 @@
     width: 100vw;
     height: 80vh;
   }
+
+  .contact-me .content ul li{
+    width: 95px;
+  }
+
+  .contact-me .content ul .contact-line span img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .contact-me .content ul li .icon-box a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .contact-me .content ul li .icon-box{
+    height: 40px;
+  }
+
+  .contact-me .content ul{
+    width: 100%;
+  }  
 }
 
 @media screen and (min-width: 715px) and (max-width: 815px) {
@@ -1334,15 +1391,33 @@
   }
 
   .contact-me .content ul li {
-    margin-right: 10px;
+    margin-right: 0px;
   }
 
   .contact-me .content .single-line-call {
     padding-right: 40px;
   }
+
+  .contact-me .content ul li{
+    width: 95px;
+  }
+
+  .contact-me .content ul .contact-line span img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .contact-me .content ul li .icon-box a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .contact-me .content ul li .icon-box{
+    height: 40px;
+  }
 }
 
-@media screen and (min-width: 550px) and (max-width: 715px) {
+@media screen and (min-width: 551px) and (max-width: 715px) {
   .infoPage {
     flex-direction: row;
     overflow-y: scroll;
@@ -1450,13 +1525,20 @@
     padding-left: 0px;
   }
 
-  .contact-me .content ul li {
-    margin-right: 10px;
-    width: 60px;
+  .contact-me .content ul .contact-line {
+    width: 55px;
   }
 
-  .contact-me .content ul .contact-line {
-    width: 60px;
+  .contact-me .content ul{
+    width: 100%;
+  }
+
+  .contact-me .content ul li{
+    width: 70px;
+  }
+
+  .contact-me .content ul li .stripe-box{
+    width: 100%;
   }
 
   .contact-me .content ul li .icon-box a {
@@ -1484,39 +1566,45 @@
 
   .navbar {
     width: 100vw;
-    height: auto;
+    height: 60px;
     justify-content: start;
     align-items: center;
     flex-direction: row;
-    position: sticky;
-    top: 0;
+    position:fixed;
+    bottom: 0;
     z-index: 1;
   }
 
   .navbar ul {
-    width: 80vw;
+    width: 100vw;
     flex-direction: row;
     justify-content: center;
     margin-left: -40px;
+    justify-content: space-evenly;
   }
 
   .navbar img {
-    width: 10px;
-    height: 10px;
-    padding-right: 3px;
-    padding-left: 3px;
+    width: 5vw;
+    height: 5vw;
   }
 
   .navbar ul li {
     margin-left: 10px;
-    width: 13vw;
-    height: 30px;
+    width: 10vw;
+    height: 10vw;
+    justify-content: space-evenly;
+    border-radius: 50%;
+  }
+
+  .navbar ul li span{
+    display: none;
   }
 
   .navbar .profile-photo {
     justify-content: center;
     width: 15vw;
     height: 15vw;
+    display: none;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1534,7 +1622,8 @@
 
   .container {
     width: 100vw;
-    height: 80vh;
+    height: 95vh;
+    padding-top: 1vh;
     overflow-x: hidden;
   }
 
@@ -1629,11 +1718,12 @@
 
   .contact-me .content ul li {
     margin-right: 10px;
-    width: 60px;
+    width: 100%;
   }
 
   .contact-me .content ul {
     flex-direction: column;
+    width: 100%;
   }
 
   .contact-me .content ul li a {
@@ -1641,7 +1731,7 @@
   }
 
   .contact-me .content ul .contact-line {
-    width: 60px;
+    width: 100px;
   }
 
   .contact-me .content ul li .icon-box a {
@@ -1739,39 +1829,45 @@
 
   .navbar {
     width: 100vw;
-    height: auto;
+    height: 50px;
     justify-content: start;
     align-items: center;
     flex-direction: row;
-    position: sticky;
+    position:fixed;
+    bottom: 0;
     z-index: 1;
-    top: 0vh;
   }
 
   .navbar ul {
-    width: 80vw;
+    width: 100vw;
     flex-direction: row;
     justify-content: center;
     margin-left: -40px;
+    justify-content: space-evenly;
   }
 
   .navbar img {
-    width: 10px;
-    height: 10px;
-    padding-right: 3px;
-    padding-left: 3px;
+    width: 5vw;
+    height: 5vw;
   }
 
   .navbar ul li {
-    margin-left: 5px;
-    width: 13vw;
-    height: 30px;
+    margin-left: 10px;
+    width: 10vw;
+    height: 10vw;
+    justify-content: space-evenly;
+    border-radius: 50%;
+  }
+
+  .navbar ul li span{
+    display: none;
   }
 
   .navbar .profile-photo {
     justify-content: center;
     width: 15vw;
     height: 15vw;
+    display: none;
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1941,7 +2037,7 @@
 
   .contact-me .content ul {
     flex-direction: column;
-    padding-left: -40px;
+    margin-left: -40px;
   }
 
   .contact-me .content ul li a {
@@ -2048,33 +2144,38 @@
 
   .navbar {
     width: 100vw;
-    height: auto;
+    height: 40px;
     justify-content: start;
     align-items: center;
     flex-direction: row;
-    position: sticky;
+    position:fixed;
+    bottom: 0;
     z-index: 1;
-    top: 0vh;
   }
 
   .navbar ul {
-    width: 80vw;
+    width: 100vw;
     flex-direction: row;
     justify-content: center;
     margin-left: -40px;
+    justify-content: space-evenly;
   }
 
   .navbar img {
-    width: 10px;
-    height: 10px;
-    padding-right: 3px;
-    padding-left: 3px;
+    width: 5vw;
+    height: 5vw;
   }
 
   .navbar ul li {
-    margin-left: 5px;
-    width: 13vw;
-    height: 20px;
+    margin-left: 10px;
+    width: 10vw;
+    height: 10vw;
+    justify-content: space-evenly;
+    border-radius: 50%;
+  }
+
+  .navbar ul li span{
+    display: none;
   }
 
   .navbar .profile-photo {
@@ -2082,6 +2183,7 @@
     width: 15vw;
     height: 15vw;
     align-items: center;
+    display: none;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -2251,7 +2353,7 @@
 
   .contact-me .content ul {
     flex-direction: column;
-    padding-left: -40px;
+    margin-left: -40px;
   }
 
   .contact-me .content ul li a {
