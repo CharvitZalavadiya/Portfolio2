@@ -31,6 +31,11 @@ import expressIcon from "./express-js.png";
 import mongoIcon from "./mongo.png";
 import tailwindIcon from "./tailwind-css.png";
 
+// projects
+import musify from "./musify.png"
+import orbital from "./orbital.png"
+import ytclone from "./ytclone.png"
+
 // contact me
 import phoneIcon from "./call.png";
 import gmailIcon from "./gmail.png";
@@ -113,6 +118,8 @@ function InfoPage() {
   const websiteDescription1Ref = useRef();
   const websitePreview2Ref = useRef();
   const websiteDescription2Ref = useRef();
+  const websitePreview3Ref = useRef();
+  const websiteDescription3Ref = useRef();
 
   const contactRef = useRef();
   const headingContactRef = useRef();
@@ -183,6 +190,8 @@ function InfoPage() {
       websiteDescription1Ref,
       websitePreview2Ref,
       websiteDescription2Ref,
+      websitePreview3Ref,
+      websiteDescription3Ref,
 
       contactRef,
       headingContactRef,
@@ -274,6 +283,10 @@ function InfoPage() {
     useState(false);
   const [isVisibleWebsiteDescription2, setIsVisibleWebsiteDescription2] =
     useState(false);
+  const [isVisibleWebsitePreview3, setIsVisibleWebsitePreview3] =
+    useState(false);
+  const [isVisibleWebsiteDescription3, setIsVisibleWebsiteDescription3] =
+    useState(false);
 
   const [isVisibleContact, setIsVisibleContact] = useState(false);
   const [isVisibleHeadingContact, setIsVisibleHeadingContact] = useState(false);
@@ -357,6 +370,11 @@ function InfoPage() {
       case "website-preview2":
         setIsVisibleWebsitePreview2(true);
         setIsVisibleWebsiteDescription2(true);
+        break;
+
+      case "website-preview3":
+        setIsVisibleWebsitePreview3(true);
+        setIsVisibleWebsiteDescription3(true);
         break;
 
       case "contact-me":
@@ -836,6 +854,33 @@ function InfoPage() {
             <span>PROJECTS</span>
           </div>
           <div className="content">
+            <div className="musify">
+              <span
+                className={`website-preview ${
+                  isVisibleWebsitePreview3 ? "in-view-website-preview-3" : ""
+                }`}
+                ref={websitePreview3Ref}
+                id="website-preview3"
+              >
+                <a href="https://charvitzalavadiya.github.io/SolarSystem/" target="_blanck">
+                <img src={musify}></img>
+                </a>
+              </span>
+              <span
+                className={`website-description ${
+                  isVisibleWebsiteDescription3
+                    ? "in-view-website-description-3"
+                    : ""
+                }`}
+                ref={websiteDescription3Ref}
+                id="website-desription1"
+              >
+                <span className="website-description-heading">Musify</span>
+                <span className="website-description-description">
+                  I have created this webapp which is connected to your spotify account, and it shows your current data like recently played songs, following artists etc. For that I have used NodeJS, ExpressJS, EJS, and Spotify Api
+                </span>
+              </span>
+            </div>
             <div className="orbital">
               <span
                 className={`website-preview ${
@@ -844,7 +889,9 @@ function InfoPage() {
                 ref={websitePreview1Ref}
                 id="website-preview1"
               >
-                <iframe src="https://charvitzalavadiyaofficial.github.io/orbital/"></iframe>
+                <a href="https://charvitzalavadiya.github.io/orbital/" target="_blanck">
+                <img src={orbital}></img>
+                </a>
               </span>
               <span
                 className={`website-description ${
@@ -871,7 +918,9 @@ function InfoPage() {
                 ref={websitePreview2Ref}
                 id="website-preview2"
               >
-                <iframe src="https://charvitzalavadiyaofficial.github.io/ytclone/"></iframe>
+                <a href="https://charvitzalavadiya.github.io/ytclone/" target="_blanck">
+                <img src={ytclone}></img>
+                </a>
               </span>
               <span
                 className={`website-description ${
@@ -954,14 +1003,14 @@ function InfoPage() {
                 <div className="contact-line">
                   <span className="icon-box cm3i">
                     <a
-                      href="https://github.com/CharvitZalavadiyaOfficial"
+                      href="https://github.com/CharvitZalavadiya"
                       target="_blank"
                     >
                       <img src={gitHubContactIcon} alt=" "></img>
                     </a>
                   </span>
                   <a
-                    href="https://github.com/CharvitZalavadiyaOfficial"
+                    href="https://github.com/CharvitZalavadiya"
                     target="_blank"
                   >
                     <span className="stripe-box cm3s">GitHub</span>
