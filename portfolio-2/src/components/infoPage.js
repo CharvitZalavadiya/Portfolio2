@@ -862,7 +862,7 @@ function InfoPage() {
                 ref={websitePreview3Ref}
                 id="website-preview3"
               >
-                <a href="https://charvitzalavadiya.github.io/SolarSystem/" target="_blanck">
+                <a href="https://musify-cz.onrender.com/login" target="_blanck">
                 <img src={musify}></img>
                 </a>
               </span>
