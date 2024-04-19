@@ -20,6 +20,9 @@ import fullstackIcon from "./fullstack.png";
 import gitIcon from "./git.png";
 import gitHubIcon from "./github.png";
 import vsCodeIcon from "./vs-code.png";
+import figmaIcon from "./figma.png";
+import webflowIcon from "./webflow.png";
+import wixIcon from "./wix.png";
 import postmanapiIcon from "./postman-api.png";
 
 import htmlIcon from "./html.png";
@@ -30,8 +33,14 @@ import nodeIcon from "./node-js.png";
 import expressIcon from "./express-js.png";
 import mongoIcon from "./mongo.png";
 import tailwindIcon from "./tailwind-css.png";
+import mysqlIcon from "./mysql.png";
+import firebaseIcon from "./firebase.png";
+import muiIcon from "./mui.png";
+import nextIcon from "./next.png";
+import scssIcon from "./scss.png";
 
 // projects
+import google from "./google.png"
 import musify from "./musify.png"
 import orbital from "./orbital.png"
 import ytclone from "./ytclone.png"
@@ -120,6 +129,8 @@ function InfoPage() {
   const websiteDescription2Ref = useRef();
   const websitePreview3Ref = useRef();
   const websiteDescription3Ref = useRef();
+  const websitePreview4Ref = useRef();
+  const websiteDescription4Ref = useRef();
 
   const contactRef = useRef();
   const headingContactRef = useRef();
@@ -192,6 +203,8 @@ function InfoPage() {
       websiteDescription2Ref,
       websitePreview3Ref,
       websiteDescription3Ref,
+      websitePreview4Ref,
+      websiteDescription4Ref,
 
       contactRef,
       headingContactRef,
@@ -287,6 +300,10 @@ function InfoPage() {
     useState(false);
   const [isVisibleWebsiteDescription3, setIsVisibleWebsiteDescription3] =
     useState(false);
+  const [isVisibleWebsitePreview4, setIsVisibleWebsitePreview4] =
+    useState(false);
+  const [isVisibleWebsiteDescription4, setIsVisibleWebsiteDescription4] =
+    useState(false);
 
   const [isVisibleContact, setIsVisibleContact] = useState(false);
   const [isVisibleHeadingContact, setIsVisibleHeadingContact] = useState(false);
@@ -377,6 +394,11 @@ function InfoPage() {
         setIsVisibleWebsiteDescription3(true);
         break;
 
+      case "website-preview4":
+        setIsVisibleWebsitePreview4(true);
+        setIsVisibleWebsiteDescription4(true);
+        break;
+
       case "contact-me":
         setIsVisibleContact(true);
         setTimeout(() => {
@@ -460,7 +482,7 @@ function InfoPage() {
             Currently I am a 2<sup>nd</sup> year student of <b>B.Tech</b> in ICT (Information and Communication Technology) specialization at Pandit Deendayal Energy University, Gandhinagar.
             </p>
             <p>
-            I am a Full Stack Web Developer with a passion for creating innovative and interactive web applications. For the Frontend development I uses <b>React JS</b>, <b>HTML</b>, <b>CSS</b>. For Backend development I uses <b>Node JS</b> and <b>ExpressJS</b>. To maintain databases I use <b>MongoDB</b> and still learning other database systems like MySQL, Firebase etc.
+            I am a Full Stack Web Developer with a passion for creating innovative and interactive web applications. For the Frontend development I uses <b>React JS</b>, <b>NextJS</b>. For Backend development I uses <b>Node JS</b> and <b>ExpressJS</b>. To maintain databases I use <b>MongoDB</b> and still learning other database systems like MySQL, Firebase etc.
             </p>
             <p>
               I also have passion in Wed Designing field and for that I'm exploring <b>Figma</b> and <b>Webflow</b> etc.
@@ -753,6 +775,18 @@ function InfoPage() {
                     <span>VS Code</span>
                   </div>
                   <div>
+                    <img src={figmaIcon} alt=" "></img>
+                    <span>Figma</span>
+                  </div>
+                  <div>
+                    <img src={webflowIcon} alt=" "></img>
+                    <span>Webflow</span>
+                  </div>
+                  <div>
+                    <img src={wixIcon} alt=" "></img>
+                    <span>Wix Studio</span>
+                  </div>
+                  <div>
                     <img src={postmanapiIcon} alt=" "></img>
                     <span>Postman API</span>
                   </div>
@@ -783,12 +817,24 @@ function InfoPage() {
                   id="languages-content"
                 >
                   <div>
+                    <span>NextJS</span>
+                    <img src={nextIcon} alt=" "></img>
+                  </div>
+                  <div>
                     <span>Node JS</span>
                     <img src={nodeIcon} alt=" "></img>
                   </div>
                   <div>
                     <span>MongoDB</span>
                     <img src={mongoIcon} alt=" "></img>
+                  </div>
+                  <div>
+                    <span>Material UI</span>
+                    <img src={muiIcon} alt=" "></img>
+                  </div>
+                  <div>
+                    <span>SCSS</span>
+                    <img src={scssIcon} alt=" "></img>
                   </div>
                   <div>
                     <span>HTML</span>
@@ -798,6 +844,8 @@ function InfoPage() {
                     <span>CSS</span>
                     <img src={cssIcon} alt=" "></img>
                   </div>
+                  
+                  
                 </div>
                 <div
                   className={`languages-content-line-2 ${
@@ -823,6 +871,14 @@ function InfoPage() {
                   <div>
                     <img src={tailwindIcon} alt=" "></img>
                     <span>Tailwind CSS</span>
+                  </div>
+                  <div>
+                    <img src={firebaseIcon} alt=" "></img>
+                    <span>Firebase</span>
+                  </div>
+                  <div>
+                    <img src={mysqlIcon} alt=" "></img>
+                    <span>MySQL</span>
                   </div>
                 </div>
               </div>
@@ -854,6 +910,33 @@ function InfoPage() {
             <span>PROJECTS</span>
           </div>
           <div className="content">
+            <div className="googlepage">
+              <span
+                className={`website-preview ${
+                  isVisibleWebsitePreview4 ? "in-view-website-preview-4" : ""
+                }`}
+                ref={websitePreview4Ref}
+                id="website-preview4"
+              >
+                <a href="https://googlecz.netlify.app" target="_blanck">
+                <img src={google}></img>
+                </a>
+              </span>
+              <span
+                className={`website-description ${
+                  isVisibleWebsiteDescription4
+                    ? "in-view-website-description-4"
+                    : ""
+                }`}
+                ref={websiteDescription4Ref}
+                id="website-desription1"
+              >
+                <span className="website-description-heading">Google HomePage</span>
+                <span className="website-description-description">
+                  I have created this webapp which is connected to your spotify account, and it shows your current data like recently played songs, following artists etc. For that I have used NodeJS, ExpressJS, EJS, and Spotify Api
+                </span>
+              </span>
+            </div>
             <div className="musify">
               <span
                 className={`website-preview ${
@@ -907,37 +990,6 @@ function InfoPage() {
                   It is a website that provides information about NASA's
                   marvellous space mission and I created this website in NASA's
                   Global Space Apps Challenge. In this project i have used HTML and CSS as hackathon was 48 hours and I have to present my website.
-                </span>
-              </span>
-            </div>
-            <div className="yt-clone">
-              <span
-                className={`website-preview ${
-                  isVisibleWebsitePreview2 ? "in-view-website-preview-2" : ""
-                }`}
-                ref={websitePreview2Ref}
-                id="website-preview2"
-              >
-                <a href="https://charvitzalavadiya.github.io/ytclone/" target="_blanck">
-                <img src={ytclone}></img>
-                </a>
-              </span>
-              <span
-                className={`website-description ${
-                  isVisibleWebsiteDescription2
-                    ? "in-view-website-description-2"
-                    : ""
-                }`}
-                ref={websiteDescription2Ref}
-                id="website-desription2"
-              >
-                <span className="website-description-heading">
-                  YouTube Clone
-                </span>
-                <span className="website-description-description">
-                  This is my very first project.
-                  I have developed this website to enhance my Frontend using
-                  HTML, Tailwind CSS and Vanilla CSS. This is fully responsive website.
                 </span>
               </span>
             </div>

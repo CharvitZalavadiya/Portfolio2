@@ -725,6 +725,12 @@
   padding-top: 40px;
 }
 
+.projects .content .googlepage {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+
 .projects .content .musify {
   display: flex;
   flex-direction: row;
@@ -804,6 +810,14 @@
 }
 
 .in-view-projects .in-view-website-description-3 {
+  animation: project-description 1s ease 1s 1 normal forwards;
+}
+
+.in-view-projects .in-view-website-preview-4 img {
+  animation: project-img 1s ease 0.8s 1 normal forwards;
+}
+
+.in-view-projects .in-view-website-description-4 {
   animation: project-description 1s ease 1s 1 normal forwards;
 }
 
@@ -1709,6 +1723,10 @@
     padding-left: 0px;
   }
 
+  .projects .content .googlepage {
+    flex-direction: column;
+  }
+
   .projects .content .musify {
     flex-direction: column;
   }
@@ -2020,6 +2038,10 @@
 
   .projects .content {
     padding-left: 0px;
+  }
+
+  .projects .content .googlepage {
+    flex-direction: column;
   }
 
   .projects .content .musify {
@@ -2340,6 +2362,10 @@
 
   .projects .content {
     padding-left: 0px;
+  }
+
+  .projects .content .googlepage {
+    flex-direction: column;
   }
 
   .projects .content .musify {
