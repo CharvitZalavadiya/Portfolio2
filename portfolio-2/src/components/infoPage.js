@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./infoPage.css";
 import photo from "./photo.jpg";
-import charvitResume from "./resume.pdf";
+import charvitResume from "./CharvitZalavadiya.pdf";
 
 // navbar images
 import aboutMeIcon from "./about-me.png";
@@ -933,7 +933,7 @@ function InfoPage() {
               >
                 <span className="website-description-heading">Google HomePage</span>
                 <span className="website-description-description">
-                  I have created this webapp which is connected to your spotify account, and it shows your current data like recently played songs, following artists etc. For that I have used NodeJS, ExpressJS, EJS, and Spotify Api
+                  I have designed this website in Figma and developed it using ReactJS for frontend, SCSS for styling and For creating API I've used ExpressJS. The purpose of developing this website is to have a cards that contains the link of different websites that are often used.
                 </span>
               </span>
             </div>
@@ -960,7 +960,7 @@ function InfoPage() {
               >
                 <span className="website-description-heading">Musify</span>
                 <span className="website-description-description">
-                  I have created this webapp which is connected to your spotify account, and it shows your current data like recently played songs, following artists etc. For that I have used NodeJS, ExpressJS, EJS, and Spotify Api
+                  I have created this webapp which is connected to your spotify account, and it shows your current data like recently played songs, following artists etc. For that I have used NodeJS, ExpressJS, EJS, and Spotify Api.
                 </span>
               </span>
             </div>
