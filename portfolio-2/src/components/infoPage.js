@@ -40,6 +40,7 @@ import nextIcon from "./next.png";
 import scssIcon from "./scss.png";
 
 // projects
+import mindmaps from "./mindmaps.png"
 import google from "./google.png"
 import musify from "./musify.png"
 import orbital from "./orbital.png"
@@ -131,6 +132,8 @@ function InfoPage() {
   const websiteDescription3Ref = useRef();
   const websitePreview4Ref = useRef();
   const websiteDescription4Ref = useRef();
+  const websitePreview5Ref = useRef();
+  const websiteDescription5Ref = useRef();
 
   const contactRef = useRef();
   const headingContactRef = useRef();
@@ -205,6 +208,8 @@ function InfoPage() {
       websiteDescription3Ref,
       websitePreview4Ref,
       websiteDescription4Ref,
+      websitePreview5Ref,
+      websiteDescription5Ref,
 
       contactRef,
       headingContactRef,
@@ -304,6 +309,10 @@ function InfoPage() {
     useState(false);
   const [isVisibleWebsiteDescription4, setIsVisibleWebsiteDescription4] =
     useState(false);
+  const [isVisibleWebsitePreview5, setIsVisibleWebsitePreview5] =
+    useState(false);
+  const [isVisibleWebsiteDescription5, setIsVisibleWebsiteDescription5] =
+    useState(false);
 
   const [isVisibleContact, setIsVisibleContact] = useState(false);
   const [isVisibleHeadingContact, setIsVisibleHeadingContact] = useState(false);
@@ -399,6 +408,11 @@ function InfoPage() {
         setIsVisibleWebsiteDescription4(true);
         break;
 
+      case "website-preview5":
+        setIsVisibleWebsitePreview5(true);
+        setIsVisibleWebsiteDescription5(true);
+        break;
+
       case "contact-me":
         setIsVisibleContact(true);
         setTimeout(() => {
@@ -455,34 +469,31 @@ function InfoPage() {
           id="about-me"
         >
           <div
-            className={`vertical-line ${
-              isVisibleVerticalLineAboutme ? "in-view-vertical-line" : ""
-            }`}
+            className={`vertical-line ${isVisibleVerticalLineAboutme ? "in-view-vertical-line" : ""
+              }`}
             id="vertical-line"
             ref={verticalLineAboutmeRef}
           ></div>
           <div
-            className={`heading ${
-              isVisibleHeadingAboutme ? "in-view-heading" : ""
-            }`}
+            className={`heading ${isVisibleHeadingAboutme ? "in-view-heading" : ""
+              }`}
             id="heading"
             ref={headingAboutmeRef}
           >
             <span>ABOUT ME</span>
           </div>
           <div
-            className={`content ${
-              isVisibleAboutmeContent ? "in-view-aboutme-content" : ""
-            }`}
+            className={`content ${isVisibleAboutmeContent ? "in-view-aboutme-content" : ""
+              }`}
             ref={aboutmeContentRef}
             id="aboutme-content"
           >
             <p>Hello user ! I'm Charvit Zalavadiya.</p>
             <p>
-            Currently I am a 2<sup>nd</sup> year student of <b>B.Tech</b> in ICT (Information and Communication Technology) specialization at Pandit Deendayal Energy University, Gandhinagar.
+              Currently I am a 3<sup>rd</sup> year student of <b>B.Tech</b> in ICT (Information and Communication Technology) specialization at Pandit Deendayal Energy University, Gandhinagar.
             </p>
             <p>
-            I am a Full Stack Web Developer with a passion for creating innovative and interactive web applications. For the Frontend development I uses <b>React JS</b>, <b>NextJS</b>. For Backend development I uses <b>Node JS</b> and <b>ExpressJS</b>. To maintain databases I use <b>MongoDB</b> and still learning other database systems like MySQL, Firebase etc.
+              I am a Full Stack Web Developer with a passion for creating innovative and interactive web applications. For the Frontend development I uses <b>React JS</b>, <b>NextJS</b>. For Backend development I uses <b>Node JS</b> and <b>ExpressJS</b>. To maintain databases I use <b>MongoDB</b> and still learning other database systems like MySQL, Firebase etc.
             </p>
             <p>
               I also have passion in Wed Designing field and for that I'm exploring <b>Figma</b> and <b>Webflow</b> etc.
@@ -502,23 +513,20 @@ function InfoPage() {
         {/* education */}
 
         <div
-          className={`education ${
-            isVisibleEducation ? "in-view-education" : ""
-          }`}
+          className={`education ${isVisibleEducation ? "in-view-education" : ""
+            }`}
           ref={educationRef}
           id="education"
         >
           <div
-            className={`vertical-line ${
-              isVisibleVerticalLineEducation ? "in-view-vertical-line" : ""
-            }`}
+            className={`vertical-line ${isVisibleVerticalLineEducation ? "in-view-vertical-line" : ""
+              }`}
             id="vertical-line"
             ref={verticalLineEducationRef}
           ></div>
           <div
-            className={`heading ${
-              isVisibleHeadingEducation ? "in-view-heading" : ""
-            }`}
+            className={`heading ${isVisibleHeadingEducation ? "in-view-heading" : ""
+              }`}
             id="heading"
             ref={headingEducationRef}
           >
@@ -528,22 +536,20 @@ function InfoPage() {
             <ul>
               <li>
                 <p
-                  className={`li-heading ${
-                    isVisibleEducationUlliHeading1
+                  className={`li-heading ${isVisibleEducationUlliHeading1
                       ? "in-view-education-ulli-heading-1"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliHeading1Ref}
                   id="educationUlliHeading1"
                 >
                   B.Tech
                 </p>
                 <p
-                  className={`li-description ${
-                    isVisibleEducationUlliDescription1
+                  className={`li-description ${isVisibleEducationUlliDescription1
                       ? "in-view-education-ulli-description-1"
                       : ""
-                  }`}
+                    }`}
                   id="educationUlliDescription1"
                   ref={educationUlliDescription1Ref}
                 >
@@ -551,22 +557,20 @@ function InfoPage() {
                   Deendayal Energy University.
                 </p>
                 <span
-                  className={`li-dates ${
-                    isVisibleEducationUlliDatesCity1
+                  className={`li-dates ${isVisibleEducationUlliDatesCity1
                       ? "in-view-education-ulli-dates-city-1"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliDatesCity1Ref}
                   id="educationUlliDatesCity"
                 >
                   October, 2022 - Present
                 </span>
                 <span
-                  className={`li-dates ${
-                    isVisibleEducationUlliDatesCity1
+                  className={`li-dates ${isVisibleEducationUlliDatesCity1
                       ? "in-view-education-ulli-dates-city-1"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliDatesCity1Ref}
                   id="educationUlliDatesCity1"
                 >
@@ -575,22 +579,20 @@ function InfoPage() {
               </li>
               <li>
                 <p
-                  className={`li-heading ${
-                    isVisibleEducationUlliHeading2
+                  className={`li-heading ${isVisibleEducationUlliHeading2
                       ? "in-view-education-ulli-heading-2"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliHeading2Ref}
                   id="educationUlliHeading2"
                 >
                   H.S.C.
                 </p>
                 <p
-                  className={`li-description ${
-                    isVisibleEducationUlliDescription2
+                  className={`li-description ${isVisibleEducationUlliDescription2
                       ? "in-view-education-ulli-description-2"
                       : ""
-                  }`}
+                    }`}
                   id="educationUlliDescription2"
                   ref={educationUlliDescription2Ref}
                 >
@@ -598,22 +600,20 @@ function InfoPage() {
                   School.
                 </p>
                 <span
-                  className={`li-dates ${
-                    isVisibleEducationUlliDatesCity2
+                  className={`li-dates ${isVisibleEducationUlliDatesCity2
                       ? "in-view-education-ulli-dates-city-2"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliDatesCity2Ref}
                   id="educationUlliDatesCity2"
                 >
                   June, 2021 - April, 2022
                 </span>
                 <span
-                  className={`li-dates ${
-                    isVisibleEducationUlliDatesCity2
+                  className={`li-dates ${isVisibleEducationUlliDatesCity2
                       ? "in-view-education-ulli-dates-city-2"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliDatesCity2Ref}
                   id="educationUlliDatesCity2"
                 >
@@ -622,44 +622,40 @@ function InfoPage() {
               </li>
               <li>
                 <p
-                  className={`li-heading ${
-                    isVisibleEducationUlliHeading3
+                  className={`li-heading ${isVisibleEducationUlliHeading3
                       ? "in-view-education-ulli-heading-3"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliHeading3Ref}
                   id="educationUlliHeading3"
                 >
                   S.S.C.
                 </p>
                 <p
-                  className={`li-description ${
-                    isVisibleEducationUlliDescription3
+                  className={`li-description ${isVisibleEducationUlliDescription3
                       ? "in-view-education-ulli-description-3"
                       : ""
-                  }`}
+                    }`}
                   id="educationUlliDescription3"
                   ref={educationUlliDescription3Ref}
                 >
                   Completed 10th grade with 86% from Sett R.J.J. High School.
                 </p>
                 <span
-                  className={`li-dates ${
-                    isVisibleEducationUlliDatesCity3
+                  className={`li-dates ${isVisibleEducationUlliDatesCity3
                       ? "in-view-education-ulli-dates-city-3"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliDatesCity3Ref}
                   id="educationUlliDatesCity3"
                 >
                   June, 2019 - March, 2020
                 </span>
                 <span
-                  className={`li-dates ${
-                    isVisibleEducationUlliDatesCity3
+                  className={`li-dates ${isVisibleEducationUlliDatesCity3
                       ? "in-view-education-ulli-dates-city-3"
                       : ""
-                  }`}
+                    }`}
                   ref={educationUlliDatesCity3Ref}
                   id="educationUlliDatesCity3"
                 >
@@ -678,16 +674,14 @@ function InfoPage() {
           id="skills"
         >
           <div
-            className={`vertical-line ${
-              isVisibleVerticalLineSkills ? "in-view-vertical-line" : ""
-            }`}
+            className={`vertical-line ${isVisibleVerticalLineSkills ? "in-view-vertical-line" : ""
+              }`}
             id="vertical-line"
             ref={verticalLineSkillsRef}
           ></div>
           <div
-            className={`heading ${
-              isVisibleHeadingSkills ? "in-view-heading" : ""
-            }`}
+            className={`heading ${isVisibleHeadingSkills ? "in-view-heading" : ""
+              }`}
             id="heading"
             ref={headingSkillsRef}
           >
@@ -699,22 +693,20 @@ function InfoPage() {
             <div className="softSkills-technologies">
               <div className="softSkills">
                 <div
-                  className={`softSkills-heading ${
-                    isVisibleSoftskillsHeading
+                  className={`softSkills-heading ${isVisibleSoftskillsHeading
                       ? "in-view-softskills-heading"
                       : ""
-                  }`}
+                    }`}
                   ref={softskillsHeadingRef}
                   id="softskills-heading"
                 >
                   Skills
                 </div>
                 <div
-                  className={`softSkills-content ${
-                    isVisibleSoftskillsContent
+                  className={`softSkills-content ${isVisibleSoftskillsContent
                       ? "in-view-softskills-content"
                       : ""
-                  }`}
+                    }`}
                   ref={softskillsContentRef}
                   id="softskills-content"
                 >
@@ -743,22 +735,20 @@ function InfoPage() {
 
               <div className="technologies">
                 <div
-                  className={`softSkills-heading ${
-                    isVisibleTechnologiesHeading
+                  className={`softSkills-heading ${isVisibleTechnologiesHeading
                       ? "in-view-technologies-heading"
                       : ""
-                  }`}
+                    }`}
                   ref={technologiesHeadingRef}
                   id="technologies-heading"
                 >
                   Technologies
                 </div>
                 <div
-                  className={`technologies-content ${
-                    isVisibleTechnologiesContent
+                  className={`technologies-content ${isVisibleTechnologiesContent
                       ? "in-view-technologies-content"
                       : ""
-                  }`}
+                    }`}
                   ref={technologiesContentRef}
                   id="technologies-content"
                 >
@@ -798,9 +788,8 @@ function InfoPage() {
 
             <div className="languages">
               <div
-                className={`softSkills-heading ${
-                  isVisibleLanguagesHeading ? "in-view-languages-heading" : ""
-                }`}
+                className={`softSkills-heading ${isVisibleLanguagesHeading ? "in-view-languages-heading" : ""
+                  }`}
                 ref={languagesHeadingRef}
                 id="languages-heading"
               >
@@ -808,11 +797,10 @@ function InfoPage() {
               </div>
               <div className="languages-content">
                 <div
-                  className={`languages-content-line-1 ${
-                    isVisibleLanguagesContent
+                  className={`languages-content-line-1 ${isVisibleLanguagesContent
                       ? "in-view-languages-content-1"
                       : ""
-                  }`}
+                    }`}
                   ref={languagesContentRef}
                   id="languages-content"
                 >
@@ -844,15 +832,14 @@ function InfoPage() {
                     <span>CSS</span>
                     <img src={cssIcon} alt=" "></img>
                   </div>
-                  
-                  
+
+
                 </div>
                 <div
-                  className={`languages-content-line-2 ${
-                    isVisibleLanguagesContent
+                  className={`languages-content-line-2 ${isVisibleLanguagesContent
                       ? "in-view-languages-content-2"
                       : ""
-                  }`}
+                    }`}
                   ref={languagesContentRef}
                   id="languages-content"
                 >
@@ -894,94 +881,86 @@ function InfoPage() {
           id="projects"
         >
           <div
-            className={`vertical-line ${
-              isVisibleVerticalLineProjects ? "in-view-vertical-line" : ""
-            }`}
+            className={`vertical-line ${isVisibleVerticalLineProjects ? "in-view-vertical-line" : ""
+              }`}
             id="vertical-line"
             ref={verticalLineProjectsRef}
           ></div>
           <div
-            className={`heading ${
-              isVisibleHeadingProjects ? "in-view-heading" : ""
-            }`}
+            className={`heading ${isVisibleHeadingProjects ? "in-view-heading" : ""
+              }`}
             id="heading"
             ref={headingProjectsRef}
           >
             <span>PROJECTS</span>
           </div>
           <div className="content">
-            <div className="googlepage">
+            <div className="mindmaps">
               <span
-                className={`website-preview ${
-                  isVisibleWebsitePreview4 ? "in-view-website-preview-4" : ""
-                }`}
-                ref={websitePreview4Ref}
-                id="website-preview4"
+                className={`website-preview ${isVisibleWebsitePreview5 ? "in-view-website-preview-5" : ""
+                  }`}
+                ref={websitePreview5Ref}
+                id="website-preview5"
               >
-                <a href="https://googlecz.netlify.app" target="_blanck">
-                <img src={google}></img>
+                <a href="https://mind-maps.vercel.app" target="_blank">
+                  <img src={mindmaps}></img>
                 </a>
               </span>
               <span
-                className={`website-description ${
-                  isVisibleWebsiteDescription4
-                    ? "in-view-website-description-4"
+                className={`website-description ${isVisibleWebsiteDescription5
+                    ? "in-view-website-description-5"
                     : ""
-                }`}
-                ref={websiteDescription4Ref}
+                  }`}
+                ref={websiteDescription5Ref}
                 id="website-desription1"
               >
-                <span className="website-description-heading">Google HomePage</span>
+                <span className="website-description-heading">Mindmaps</span>
                 <span className="website-description-description">
                   I have designed this website in Figma and developed it using ReactJS for frontend, SCSS for styling and For creating API I've used ExpressJS. The purpose of developing this website is to have a cards that contains the link of different websites that are often used.
                 </span>
               </span>
             </div>
-            <div className="musify">
+            <div className="googlepage">
               <span
-                className={`website-preview ${
-                  isVisibleWebsitePreview3 ? "in-view-website-preview-3" : ""
-                }`}
-                ref={websitePreview3Ref}
-                id="website-preview3"
+                className={`website-preview ${isVisibleWebsitePreview4 ? "in-view-website-preview-4" : ""
+                  }`}
+                ref={websitePreview4Ref}
+                id="website-preview4"
               >
-                <a href="https://musify-cz.onrender.com/login" target="_blanck">
-                <img src={musify}></img>
+                <a href="https://googlecz.netlify.app" target="_blank">
+                  <img src={google}></img>
                 </a>
               </span>
               <span
-                className={`website-description ${
-                  isVisibleWebsiteDescription3
-                    ? "in-view-website-description-3"
+                className={`website-description ${isVisibleWebsiteDescription4
+                    ? "in-view-website-description-4"
                     : ""
-                }`}
-                ref={websiteDescription3Ref}
+                  }`}
+                ref={websiteDescription4Ref}
                 id="website-desription1"
               >
-                <span className="website-description-heading">Musify</span>
+                <span className="website-description-heading">Chrome Startup Page</span>
                 <span className="website-description-description">
-                  I have created this webapp which is connected to your spotify account, and it shows your current data like recently played songs, following artists etc. For that I have used NodeJS, ExpressJS, EJS, and Spotify Api.
+                  I have designed this website in Figma and developed it using ReactJS for frontend, SCSS for styling and For creating API I've used ExpressJS. The purpose of developing this website is to have a cards that contains the link of different websites that are often used.
                 </span>
               </span>
             </div>
             <div className="orbital">
               <span
-                className={`website-preview ${
-                  isVisibleWebsitePreview1 ? "in-view-website-preview-1" : ""
-                }`}
+                className={`website-preview ${isVisibleWebsitePreview1 ? "in-view-website-preview-1" : ""
+                  }`}
                 ref={websitePreview1Ref}
                 id="website-preview1"
               >
-                <a href="https://charvitzalavadiya.github.io/orbital/" target="_blanck">
-                <img src={orbital}></img>
+                <a href="https://charvitzalavadiya.github.io/orbital/" target="_blank">
+                  <img src={orbital}></img>
                 </a>
               </span>
               <span
-                className={`website-description ${
-                  isVisibleWebsiteDescription1
+                className={`website-description ${isVisibleWebsiteDescription1
                     ? "in-view-website-description-1"
                     : ""
-                }`}
+                  }`}
                 ref={websiteDescription1Ref}
                 id="website-desription1"
               >
@@ -1004,25 +983,22 @@ function InfoPage() {
           id="contact-me"
         >
           <div
-            className={`vertical-line ${
-              isVisibleVerticalLineContact ? "in-view-vertical-line" : ""
-            }`}
+            className={`vertical-line ${isVisibleVerticalLineContact ? "in-view-vertical-line" : ""
+              }`}
             id="vertical-line"
             ref={verticalLineContactRef}
           ></div>
           <div
-            className={`heading ${
-              isVisibleHeadingContact ? "in-view-heading" : ""
-            }`}
+            className={`heading ${isVisibleHeadingContact ? "in-view-heading" : ""
+              }`}
             id="heading"
             ref={headingContactRef}
           >
             <span>Connect Me</span>
           </div>
           <div
-            className={`content ${
-              isVisibleContactContent ? "in-view-contact-content" : ""
-            }`}
+            className={`content ${isVisibleContactContent ? "in-view-contact-content" : ""
+              }`}
             ref={contactContentRef}
             id="contact-content"
           >
@@ -1126,9 +1102,8 @@ function InfoPage() {
             </ul>
             <div className="single-line-for-call-email">
               <span
-                className={`single-line-call ${
-                  isVisibleSingleLineCall ? "in-view-single-line-call" : ""
-                }`}
+                className={`single-line-call ${isVisibleSingleLineCall ? "in-view-single-line-call" : ""
+                  }`}
                 ref={contactSingleLineCallRef}
                 id="single-line-call"
               >
@@ -1136,9 +1111,8 @@ function InfoPage() {
                 +91 8849564484
               </span>
               <span
-                className={`single-line-email ${
-                  isVisibleSingleLineEmail ? "in-view-single-line-Email" : ""
-                }`}
+                className={`single-line-email ${isVisibleSingleLineEmail ? "in-view-single-line-Email" : ""
+                  }`}
                 ref={contactSingleLineEmailRef}
                 id="single-line-Email"
               >
